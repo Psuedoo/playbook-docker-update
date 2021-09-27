@@ -2,14 +2,14 @@
   tags:
     - portainer
   docker_container:
-      name: portainer
-      image: portainer/portainer-ce:latest
-      state: started
-      pull: true
-      restart: yes
-      volumes:
-          -   /var/run/docker.sock:/var/run/docker.sock
-          -   /home/psuedoo/dev/portainer/portainer_data:/data
-      published_ports:
-          -   8000:8000
-          -   9000:9000
+    name: portainer
+    image: portainer/portainer-ce:latest
+    state: started
+    pull: true
+    restart: yes
+    volumes:
+      -   /var/run/docker.sock:/var/run/docker.sock
+      -   /home/psuedoo/dev/portainer/portainer_data:/data
+    published_ports:
+      -   8000:8000
+      -   9000:9000
