@@ -1,0 +1,5 @@
+---
+-   hosts: Server
+    vars_files: vars/swag.yml
+    tasks:
+        -   import_tasks: tasks/portainer.yml
