@@ -1,3 +1,4 @@
+---
 - name: Restart portainer
   tags:
     - portainer
