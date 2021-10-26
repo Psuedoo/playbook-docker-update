@@ -9,7 +9,7 @@
     restart: yes
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /home/psuedo/dev/portainer/portainer_data:/data
+      - /opt/portainer/portainer_data:/data
     published_ports:
       - 8000:8000
       - 9000:9000

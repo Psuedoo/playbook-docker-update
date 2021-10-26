@@ -1,0 +1,20 @@
+- name: Restart AdGuard
+  tags:
+    - adguard
+  docker_container:
+    name: adguardhome
+    image: adguard/adguardhome
+    state: started
+    pull: true
+    restart: yes
+    volumes:
+      - /opt/adguard/workdir:/opt/adguardhome/work
+      - /opt/adguard/confdir:/opt/adguardhome/conf
+    published_ports:
+      - 53:53/tcp
+      - 53:53/udp
+      - 784:784/udp
+      - 853:853/tcp
+      - 3000:3000/tcp
+      - 8081:80/tcp
+      - 8443:443/tcp

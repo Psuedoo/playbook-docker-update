@@ -1,5 +1,7 @@
 ---
-- hosts: Server
+- hosts: supermicro 
   vars_files: vars/swag.yml
   tasks:
     - import_tasks: tasks/portainer.yml
+    - import_tasks: tasks/dashmachine.yml
+    - import_tasks: tasks/adguard.yml

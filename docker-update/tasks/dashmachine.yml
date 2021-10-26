@@ -1,0 +1,14 @@
+---
+- name: Restart dashmachine
+  tags:
+    - dashmachine
+  docker_container:
+    name: dashmachine
+    image: rmountjoy/dashmachine:latest
+    state: started
+    pull: true
+    restart: yes
+    volumes:
+      - /opt/dashmachine/data:/dashmachine/dashmachine/user_data
+    published_ports:
+      - 5001:5000
